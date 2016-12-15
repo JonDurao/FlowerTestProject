@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="saber_mas">
+        <item>Soluciones para el cuidado de la piel</item>
+        <item>Fragancias y cuidado del cuerpo</item>
+        <item>Looks de novias/cambios de look</item>
+        <item>La oportunidad Mary Kay</item>
+        <item>Técnicas de maquillaje y cambios de look</item>
+        <item>Acciones solidarias</item>
+        <item>Ser anfitriona de fabulosas Sesiones de Belleza</item>
+        <item>Encontrar la base de maquillaje perfecta</item>
+    </string-array>
+
+    <string-array name="saber_mas_botones">
+        <item>saber_mas_radio_button_1</item>
+        <item>saber_mas_radio_button_2</item>
+        <item>saber_mas_radio_button_3</item>
+        <item>saber_mas_radio_button_4</item>
+        <item>saber_mas_radio_button_5</item>
+        <item>saber_mas_radio_button_6</item>
+        <item>saber_mas_radio_button_7</item>
+        <item>saber_mas_radio_button_8</item>
+    </string-array>
+</resources>

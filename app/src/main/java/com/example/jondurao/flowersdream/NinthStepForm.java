@@ -16,6 +16,6 @@ public class NinthStepForm extends AppCompatActivity {
 
         ImageView forwardButton = (ImageView) findViewById(R.id.ninth_forward_button);
 
-        SetOnClickListenerForwardFinalForm(this, forwardButton, 9);
+        SetOnClickListenerForwardForm(this, forwardButton, TenthStepForm.class, 9);
     }
 }

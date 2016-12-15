@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -110,6 +111,26 @@ public class Commons {
     };
 
     private static ArrayList<String> erroresDatos = new ArrayList<>();
+
+    public static void setTextButtons(Activity context, String[] vector, String[] elementos){
+        int resource;
+        RadioButton boton;
+
+        if (vector.length < elementos.length){
+            for (int j = 0; j < (elementos.length - vector.length); j++){
+                resource = context.getResources().getIdentifier(elementos[(vector.length+j)], "id", context.getPackageName());
+                View vistaGen = context.findViewById(resource);
+                vistaGen.setVisibility(View.GONE);
+            }
+        }
+
+        for (int i = 0; i < vector.length; i++){
+            resource = context.getResources().getIdentifier(elementos[i], "id", context.getPackageName());
+            boton = (RadioButton) context.findViewById(resource);
+            boton.setText(vector[i]);
+            boton.setHint(vector[i]);
+        }
+    }
 
     public static void OpenAlertDialog(final Activity context, String title, String message, String button, final String action){
         AlertDialog.Builder adb = new AlertDialog.Builder(context);

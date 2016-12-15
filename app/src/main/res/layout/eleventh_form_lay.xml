@@ -1,13 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/eleventh_form_lay"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jondurao.flowersdream.EleventhStepForm">
+<RelativeLayout
+        android:padding="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/saber_mas_title"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:text="Me gustaria saber sobre"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"/>
+
+        <RelativeLayout
+            android:id="@+id/saber_mas_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/saber_mas_title"
+            android:padding="8dp">
+
+            <RadioGroup
+                android:id="@+id/saber_mas_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/saber_mas_radio_button_1"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:hint="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="1"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/saber_mas_radio_button_2"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:hint="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="2"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/saber_mas_radio_button_3"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:hint="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="3"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/saber_mas_radio_button_4"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:hint="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="4"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/saber_mas_radio_button_5"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:hint="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="5"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/saber_mas_radio_button_6"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:hint="6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="6"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/saber_mas_radio_button_7"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:hint="7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="7"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/saber_mas_radio_button_8"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:hint="8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="8"
+                    android:textSize="12sp"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"
+                android:src="@drawable/ic_left_arrow"/>
+
+            <ImageView
+                android:id="@+id/first_forward_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"
+                android:src="@drawable/ic_right_arrow"/>
+        </LinearLayout>
+
+    </RelativeLayout>
