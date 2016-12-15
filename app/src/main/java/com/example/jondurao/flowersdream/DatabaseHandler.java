@@ -46,6 +46,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String CLIENTA_COLUMNA_BENEFICIO_MASCARA = "ColumnaBeneficioMascara";
     public static final String CLIENTA_COLUMNA_TIPO_COBERTURA = "ColumnaTipoCobertura";
     public static final String CLIENTA_COLUMNA_TONOS_MAQUILLAJE = "ColumnaTonosMaquillaje";
+    public static final String CLIENTA_COLUMNA_COLOR_PELO = "ColumnaColorPelo";
+    public static final String CLIENTA_COLUMNA_COLOR_OJOS = "ColumnaColorOjos";
+    public static final String CLIENTA_COLUMNA_FORMA_LABIOS = "ColumnaFormaLabios";
+    public static final String CLIENTA_COLUMNA_FORMA_OJOS = "ColumnaFormaOjos";
+    public static final String CLIENTA_COLUMNA_FORMA_CARA = "ColumnaFormaCara";
 
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NAME + " (" +
@@ -68,7 +73,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     CLIENTA_COLUMNA_RUTINA_DIARIA + TEXT_TYPE + COMMA_SEP +
                     CLIENTA_COLUMNA_BENEFICIO_MASCARA + TEXT_TYPE + COMMA_SEP +
                     CLIENTA_COLUMNA_TIPO_COBERTURA + TEXT_TYPE + COMMA_SEP +
-                    CLIENTA_COLUMNA_TONOS_MAQUILLAJE + TEXT_TYPE + " )";
+                    CLIENTA_COLUMNA_TONOS_MAQUILLAJE + TEXT_TYPE + COMMA_SEP +
+                    CLIENTA_COLUMNA_COLOR_PELO + TEXT_TYPE + COMMA_SEP +
+                    CLIENTA_COLUMNA_COLOR_OJOS + TEXT_TYPE + COMMA_SEP +
+                    CLIENTA_COLUMNA_FORMA_LABIOS + TEXT_TYPE + COMMA_SEP +
+                    CLIENTA_COLUMNA_FORMA_OJOS + TEXT_TYPE + COMMA_SEP +
+                    CLIENTA_COLUMNA_FORMA_CARA + TEXT_TYPE + " )";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -114,6 +124,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         cv.put(CLIENTA_COLUMNA_BENEFICIO_MASCARA, contactos.get_beneficioMascara());
         cv.put(CLIENTA_COLUMNA_TIPO_PIEL, contactos.get_tipoPiel());
         cv.put(CLIENTA_COLUMNA_TONOS_MAQUILLAJE, contactos.get_tonosMaquillaje());
+        cv.put(CLIENTA_COLUMNA_COLOR_PELO, contactos.get_colorPelo());
+        cv.put(CLIENTA_COLUMNA_COLOR_OJOS, contactos.get_colorOjos());
+        cv.put(CLIENTA_COLUMNA_FORMA_LABIOS, contactos.get_formaLabios());
+        cv.put(CLIENTA_COLUMNA_FORMA_OJOS, contactos.get_formaOjos());
+        cv.put(CLIENTA_COLUMNA_FORMA_CARA, contactos.get_formaCara());
 
         db.insert(TABLE_NAME, null, cv);
         db.close();
@@ -128,7 +143,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 CLIENTA_COLUMNA_TRABAJO, CLIENTA_COLUMNA_TURNO, CLIENTA_COLUMNA_METODO_CONTACTO, CLIENTA_COLUMNA_DIRECCION,
                 CLIENTA_COLUMNA_CUMPLEAÑOS, CLIENTA_COLUMNA_ANIVERSARIO, CLIENTA_COLUMNA_PROFESION, CLIENTA_COLUMNA_TIPO_PIEL,
                 CLIENTA_COLUMNA_MAYOR_PREOCUPACION, CLIENTA_COLUMNA_OTRA_PREOCUPACION, CLIENTA_COLUMNA_RUTINA_DIARIA,
-                CLIENTA_COLUMNA_BENEFICIO_MASCARA, CLIENTA_COLUMNA_TIPO_PIEL, CLIENTA_COLUMNA_TONOS_MAQUILLAJE}, CLIENTA_ID + "=?",
+                CLIENTA_COLUMNA_BENEFICIO_MASCARA, CLIENTA_COLUMNA_TIPO_PIEL, CLIENTA_COLUMNA_TONOS_MAQUILLAJE, CLIENTA_COLUMNA_COLOR_PELO,
+                CLIENTA_COLUMNA_COLOR_OJOS, CLIENTA_COLUMNA_FORMA_LABIOS, CLIENTA_COLUMNA_FORMA_OJOS, CLIENTA_COLUMNA_FORMA_CARA}, CLIENTA_ID + "=?",
                 new String[] {String.valueOf(id)}, null, null, null, null);
 
         if (cursor != null){
@@ -139,7 +155,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6),
                 cursor.getString(7), cursor.getString(8), cursor.getString(9), cursor.getString(10), cursor.getString(11),
                 cursor.getString(12), cursor.getString(13), cursor.getString(14), cursor.getString(15), cursor.getString(16),
-                cursor.getString(17), cursor.getString(18), cursor.getString(19));
+                cursor.getString(17), cursor.getString(18), cursor.getString(19), cursor.getString(20), cursor.getString(21),
+                cursor.getString(22), cursor.getString(23), cursor.getString(24));
         return cd;
     }
 
@@ -176,6 +193,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 contactos.set_beneficioMascara(cursor.getString(17));
                 contactos.set_tipoPiel(cursor.getString(18));
                 contactos.set_tonosMaquillaje(cursor.getString(19));
+                contactos.set_colorPelo(cursor.getString(20));
+                contactos.set_colorOjos(cursor.getString(21));
+                contactos.set_formaLabios(cursor.getString(22));
+                contactos.set_formaOjos(cursor.getString(23));
+                contactos.set_formaCara(cursor.getString(24));
 
                 // Adding contact to list
                 contactList.add(contactos);

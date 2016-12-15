@@ -338,6 +338,12 @@ public class Commons {
             contacto.set_tipoCobertura(TIPO_COBERTURA[Integer.parseInt(RetrieveRadioGroupChecked(context, R.id.tipo_cobertura_radio_group))]);
         } else if (step == 9){
             contacto.set_tonosMaquillaje(TONOS_MAQUILLAJE[Integer.parseInt(RetrieveRadioGroupChecked(context, R.id.tonos_maquillaje_radio_group))]);
+        } else if (step == 10){
+            contacto.set_colorPelo(RetrieveEditText(context, R.id.color_pelo_edit));
+            contacto.set_colorOjos(RetrieveEditText(context, R.id.color_ojos_edit));
+            contacto.set_formaLabios(RetrieveRadioGroupChecked(context, R.id.labios_forma_radio_group));
+            contacto.set_formaOjos(RetrieveRadioGroupChecked(context, R.id.ojos_forma_radio_group));
+            contacto.set_formaCara(RetrieveRadioGroupChecked(context, R.id.cara_forma_radio_group));
         }
     }
 
@@ -500,7 +506,6 @@ public class Commons {
                 return false;
             }
         } else if (step == 9) {
-
             try {
                 RadioGroup rg = (RadioGroup) context.findViewById(R.id.tonos_maquillaje_radio_group);
 
@@ -513,8 +518,23 @@ public class Commons {
                 OpenAlertDialog(context, "Error", "No has seleccionado ningun tono de piel", "OK", null);
                 return false;
             }
-        } else {
-            return false;
+        } else if (step == 10) {
+            try {
+                RadioGroup rg1 = (RadioGroup) context.findViewById(R.id.labios_forma_radio_group);
+                RadioGroup rg2 = (RadioGroup) context.findViewById(R.id.ojos_forma_radio_group);
+                RadioGroup rg3 = (RadioGroup) context.findViewById(R.id.cara_forma_radio_group);
+
+                if (rg1.getCheckedRadioButtonId() != -1 && rg2.getCheckedRadioButtonId() != -1 && rg3.getCheckedRadioButtonId() != -1){
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (Exception e){
+                OpenAlertDialog(context, "Error", "Selecciona un elemento en cada grupo", "OK", null);
+                return false;
+            }
+        } else{
+                return false;
         }
     }
 }

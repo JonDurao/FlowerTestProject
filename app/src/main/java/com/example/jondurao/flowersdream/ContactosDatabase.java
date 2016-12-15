@@ -9,7 +9,8 @@ import java.io.Serializable;
 public class ContactosDatabase implements Serializable{
     int _id;
     String _fecha, _nombre, _email, _movil, _casa, _trabajo, _turno, _metodoContacto, _direccion, _cumpleaños, _aniversario,
-            _profesion, _tipoPiel, _mayorPreocupacion, _otrasPreocupaciones, _rutinaDiaria, _beneficioMascara, _tipoCobertura, _tonosMaquillaje;
+            _profesion, _tipoPiel, _mayorPreocupacion, _otrasPreocupaciones, _rutinaDiaria, _beneficioMascara, _tipoCobertura, _tonosMaquillaje,
+            _colorPelo, _colorOjos, _formaLabios, _formaOjos, _formaCara;
 
     public ContactosDatabase(){
 
@@ -17,7 +18,8 @@ public class ContactosDatabase implements Serializable{
 
     public ContactosDatabase(int id, String fecha, String nombre, String email, String movil, String casa, String trabajo, String turno, String metodoContacto,
                              String direccion, String cumpleaños, String aniversario, String profesion, String tipoPiel, String mayorPreocupacion,
-                             String otrasPreocupaciones, String rutinaDiaria, String beneficioMascara, String tipoCobertura, String tonosMaquillaje){
+                             String otrasPreocupaciones, String rutinaDiaria, String beneficioMascara, String tipoCobertura, String tonosMaquillaje,
+                             String colorPelo, String colorOjos, String formaLabios, String formaOjos, String formaCara){
         this._id = id;
         this._fecha = fecha;
         this._nombre = nombre;
@@ -38,6 +40,11 @@ public class ContactosDatabase implements Serializable{
         this._beneficioMascara = beneficioMascara;
         this._tipoCobertura = tipoCobertura;
         this._tonosMaquillaje = tonosMaquillaje;
+        this._colorPelo = colorPelo;
+        this._colorOjos = colorOjos;
+        this._formaLabios = formaLabios;
+        this._formaOjos = formaOjos;
+        this._formaCara = formaCara;
     }
 
     public int get_id(){
@@ -157,4 +164,24 @@ public class ContactosDatabase implements Serializable{
     public String get_tonosMaquillaje() {return _tonosMaquillaje;}
 
     public void set_tonosMaquillaje(String _tonosMaquillaje) {this._tonosMaquillaje = _tonosMaquillaje;}
+
+    public String get_colorPelo() {return _colorPelo;}
+
+    public void set_colorPelo(String _colorPelo) {this._colorPelo = _colorPelo;}
+
+    public String get_colorOjos() {return _colorOjos;}
+
+    public void set_colorOjos(String _colorOjos) {this._colorOjos = _colorOjos;}
+
+    public String get_formaLabios() {return _formaLabios;}
+
+    public void set_formaLabios(String _formaLabios) {this._formaLabios = _formaLabios;}
+
+    public String get_formaOjos() {return _formaOjos;}
+
+    public void set_formaOjos(String _formaOjos) {this._formaOjos = _formaOjos;}
+
+    public String get_formaCara() {return _formaCara;}
+
+    public void set_formaCara(String _formaCara) {this._formaCara = _formaCara;}
 }
