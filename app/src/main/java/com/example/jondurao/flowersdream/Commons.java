@@ -112,9 +112,8 @@ public class Commons {
 
     private static ArrayList<String> erroresDatos = new ArrayList<>();
 
-    public static void setTextButtons(Activity context, String[] vector, String[] elementos){
+    public static void setTextButtons(Activity context, String[] vector, String[] elementos, String tipoBoton){
         int resource;
-        RadioButton boton;
 
         if (vector.length < elementos.length){
             for (int j = 0; j < (elementos.length - vector.length); j++){
@@ -124,11 +123,25 @@ public class Commons {
             }
         }
 
-        for (int i = 0; i < vector.length; i++){
-            resource = context.getResources().getIdentifier(elementos[i], "id", context.getPackageName());
-            boton = (RadioButton) context.findViewById(resource);
-            boton.setText(vector[i]);
-            boton.setHint(vector[i]);
+        if (tipoBoton == "CheckBox"){
+            CheckBox boton;
+
+            for (int i = 0; i < vector.length; i++){
+                resource = context.getResources().getIdentifier(elementos[i], "id", context.getPackageName());
+                boton = (CheckBox) context.findViewById(resource);
+                boton.setText(vector[i]);
+                boton.setHint(vector[i]);
+            }
+
+        } else if (tipoBoton == "RadioButton"){
+            RadioButton boton;
+
+            for (int i = 0; i < vector.length; i++){
+                resource = context.getResources().getIdentifier(elementos[i], "id", context.getPackageName());
+                boton = (RadioButton) context.findViewById(resource);
+                boton.setText(vector[i]);
+                boton.setHint(vector[i]);
+            }
         }
     }
 
@@ -344,6 +357,8 @@ public class Commons {
             contacto.set_formaLabios(RetrieveRadioGroupChecked(context, R.id.labios_forma_radio_group));
             contacto.set_formaOjos(RetrieveRadioGroupChecked(context, R.id.ojos_forma_radio_group));
             contacto.set_formaCara(RetrieveRadioGroupChecked(context, R.id.cara_forma_radio_group));
+        } else if (step == 11){
+            contacto.set_saberMas(getSelectedBoxesHints(context, context.getResources().getStringArray(R.array.saber_mas_botones)));
         }
     }
 
@@ -368,8 +383,8 @@ public class Commons {
         return auxString;
     }
 
-    public static Boolean CheckMissingFields(Activity context, int step){
-        if (step == 1){
+    public static Boolean CheckMissingFields(Activity context, int step) {
+        if (step == 1) {
             EditText fechaEdit = (EditText) context.findViewById(R.id.fecha_edit);
             EditText nombreEdit = (EditText) context.findViewById(R.id.nombre_edit);
             EditText emailEdit = (EditText) context.findViewById(R.id.email_edit);
@@ -377,21 +392,21 @@ public class Commons {
             EditText casaEdit = (EditText) context.findViewById(R.id.casa_edit);
             EditText trabajoEdit = (EditText) context.findViewById(R.id.trabajo_edit);
 
-            if (RetrieveEditText(context, R.id.fecha_edit).isEmpty()){
+            if (RetrieveEditText(context, R.id.fecha_edit).isEmpty()) {
                 erroresDatos.add("MissingDate");
                 fechaEdit.setError("Introduce una fecha");
             } else {
-                if (erroresDatos.contains("MissingDate")){
+                if (erroresDatos.contains("MissingDate")) {
                     fechaEdit.setError(null);
                     erroresDatos.remove("MissingDate");
                 }
             }
 
-            if (RetrieveEditText(context, R.id.nombre_edit).isEmpty()){
+            if (RetrieveEditText(context, R.id.nombre_edit).isEmpty()) {
                 erroresDatos.add("MissingName");
                 nombreEdit.setError("Introduce un nombre");
             } else {
-                if (erroresDatos.contains("MissingName")){
+                if (erroresDatos.contains("MissingName")) {
                     nombreEdit.setError(null);
                     erroresDatos.remove("MissingName");
                 }
@@ -399,11 +414,11 @@ public class Commons {
 
             if (RetrieveEditText(context, R.id.email_edit).isEmpty()
                     || !RetrieveEditText(context, R.id.email_edit).contains("@")
-                    || !RetrieveEditText(context, R.id.email_edit).contains(".")){
+                    || !RetrieveEditText(context, R.id.email_edit).contains(".")) {
                 erroresDatos.add("MissingEmail");
                 emailEdit.setError("Introduce un Email");
             } else {
-                if (erroresDatos.contains("MissingEmail")){
+                if (erroresDatos.contains("MissingEmail")) {
                     emailEdit.setError(null);
                     erroresDatos.remove("MissingEmail");
                 }
@@ -411,14 +426,14 @@ public class Commons {
 
             if (RetrieveEditText(context, R.id.movil_edit).isEmpty()
                     && RetrieveEditText(context, R.id.casa_edit).isEmpty()
-                    && RetrieveEditText(context, R.id.trabajo_edit).isEmpty()){
+                    && RetrieveEditText(context, R.id.trabajo_edit).isEmpty()) {
                 erroresDatos.add("MissingPhone");
 
                 movilEdit.setError("Introduce al menos un telefono");
                 casaEdit.setError("Introduce al menos un telefono");
                 trabajoEdit.setError("Introduce al menos un telefono");
             } else {
-                if (erroresDatos.contains("MissingPhone")){
+                if (erroresDatos.contains("MissingPhone")) {
                     movilEdit.setError(null);
                     casaEdit.setError(null);
                     trabajoEdit.setError(null);
@@ -426,69 +441,69 @@ public class Commons {
                 }
             }
 
-            if (erroresDatos.isEmpty()){
+            if (erroresDatos.isEmpty()) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
-        } else if (step == 2){
+        } else if (step == 2) {
             EditText cumpleañosEdit = (EditText) context.findViewById(R.id.cumpleaños_edit);
 
-            if (RetrieveEditText(context, R.id.cumpleaños_edit).isEmpty()){
+            if (RetrieveEditText(context, R.id.cumpleaños_edit).isEmpty()) {
                 erroresDatos.add("MissingBirthdate");
                 cumpleañosEdit.setError("Introduce un cumpleaños");
             } else {
-                if (erroresDatos.contains("MissingBirthdate")){
+                if (erroresDatos.contains("MissingBirthdate")) {
                     cumpleañosEdit.setError(null);
                     erroresDatos.remove("MissingBirthdate");
                 }
             }
 
-            if (erroresDatos.isEmpty()){
+            if (erroresDatos.isEmpty()) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
-        } else if (step == 3){
+        } else if (step == 3) {
             try {
                 RadioGroup rg = (RadioGroup) context.findViewById(R.id.piel_radio_group);
-                if (rg.getCheckedRadioButtonId() != -1){
+                if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
                     return false;
                 }
-            }catch (Exception e){
+            } catch (Exception e) {
                 OpenAlertDialog(context, "Error", "No has seleccionado ningun tipo de piel", "OK", null);
                 return false;
             }
 
-        } else if (step == 4){
+        } else if (step == 4) {
             try {
                 RadioGroup rg = (RadioGroup) context.findViewById(R.id.mayor_preocupacion_radio_group);
 
-                if (rg.getCheckedRadioButtonId() != -1){
+                if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
                     return false;
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 OpenAlertDialog(context, "Error", "No has seleccionado ningun problema", "OK", null);
                 return false;
             }
         } else if (step == 5) {
             return true;
-        } else if (step == 6){
+        } else if (step == 6) {
             return true;
-        }  else if (step == 7){
+        } else if (step == 7) {
             try {
                 RadioGroup rg = (RadioGroup) context.findViewById(R.id.base_maquillaje_radio_group);
 
-                if (rg.getCheckedRadioButtonId() != -1){
+                if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
                     return false;
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 OpenAlertDialog(context, "Error", "No has seleccionado ninguna base", "OK", null);
                 return false;
             }
@@ -496,12 +511,12 @@ public class Commons {
             try {
                 RadioGroup rg = (RadioGroup) context.findViewById(R.id.tipo_cobertura_radio_group);
 
-                if (rg.getCheckedRadioButtonId() != -1){
+                if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
                     return false;
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 OpenAlertDialog(context, "Error", "No has seleccionado ninguna cobertura", "OK", null);
                 return false;
             }
@@ -509,12 +524,12 @@ public class Commons {
             try {
                 RadioGroup rg = (RadioGroup) context.findViewById(R.id.tonos_maquillaje_radio_group);
 
-                if (rg.getCheckedRadioButtonId() != -1){
+                if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
                     return false;
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 OpenAlertDialog(context, "Error", "No has seleccionado ningun tono de piel", "OK", null);
                 return false;
             }
@@ -524,17 +539,19 @@ public class Commons {
                 RadioGroup rg2 = (RadioGroup) context.findViewById(R.id.ojos_forma_radio_group);
                 RadioGroup rg3 = (RadioGroup) context.findViewById(R.id.cara_forma_radio_group);
 
-                if (rg1.getCheckedRadioButtonId() != -1 && rg2.getCheckedRadioButtonId() != -1 && rg3.getCheckedRadioButtonId() != -1){
+                if (rg1.getCheckedRadioButtonId() != -1 && rg2.getCheckedRadioButtonId() != -1 && rg3.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
                     return false;
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 OpenAlertDialog(context, "Error", "Selecciona un elemento en cada grupo", "OK", null);
                 return false;
             }
+        } else if (step == 11){
+            return true;
         } else{
-                return false;
+            return false;
         }
     }
 }

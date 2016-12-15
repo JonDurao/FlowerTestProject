@@ -15,6 +15,6 @@ public class EleventhStepForm extends AppCompatActivity {
 
         valores = getResources().getStringArray(R.array.saber_mas);
         botones = getResources().getStringArray(R.array.saber_mas_botones);
-        setTextButtons(this, valores, botones);
+        setTextButtons(this, valores, botones, "CheckBox");
     }
 }
