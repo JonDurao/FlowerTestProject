@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FlowersDream</string>
+    <string name="alphabet">abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ</string>
+    <string name="numbers">0123456789</string>
+
+    <string-array name="otras_preocupaciones">
+        <item>
+
+        </item>
+    </string-array>
+</resources>

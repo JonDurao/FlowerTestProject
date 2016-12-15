@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/direccion_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="4dp"
+        android:text="Direccion"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/direccion_edit"
+        android:background="@color/colorAccentDark"
+        android:gravity="left"
+        android:inputType="textPostalAddress"
+        android:maxLength="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/direccion_label"
+        android:padding="8dp"
+        android:hint="Direccion"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/cumpleaños_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/direccion_edit"
+        android:padding = "4dp"
+        android:text="Cumpleaños"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/cumpleaños_edit"
+        android:background="@color/colorAccentDark"
+        android:digits="@string/numbers"
+        android:gravity="left"
+        android:inputType="date"
+        android:maxLength="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cumpleaños_label"
+        android:padding="8dp"
+        android:hint="dd/mm/YYYY"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/aniversario_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cumpleaños_edit"
+        android:padding ="4dp"
+        android:text="Aniversario"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/aniversario_edit"
+        android:background="@color/colorAccentDark"
+        android:digits="@string/numbers"
+        android:gravity="left"
+        android:inputType="date"
+        android:maxLength="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aniversario_label"
+        android:padding="8dp"
+        android:hint="dd/mm/YYYY"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/profesion_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aniversario_edit"
+        android:padding="4dp"
+        android:text="Profesion"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/profesion_edit"
+        android:background="@color/colorAccentDark"
+        android:gravity="left"
+        android:inputType="textEmailAddress"
+        android:hint="Profesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profesion_label"
+        android:padding="8dp"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/second_backward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_left_arrow"/>
+
+        <ImageView
+            android:id="@+id/second_forward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_right_arrow"/>
+    </LinearLayout>
+
+</RelativeLayout>

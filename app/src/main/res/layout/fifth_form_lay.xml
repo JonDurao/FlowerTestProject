@@ -1,0 +1,181 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/otra_preocupacion_title"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:text="Otras preocupaciones"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"/>
+
+        <LinearLayout
+            android:id="@+id/button_layout_fifth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+            <ImageView
+                android:id="@+id/fifth_backward_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_left_arrow"/>
+
+            <ImageView
+                android:id="@+id/fifth_forward_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_right_arrow"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/otra_preocupacion_grupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otra_preocupacion_title"
+            android:layout_above="@id/button_layout_fifth">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:padding="8dp">
+
+                <CheckBox
+                    android:id="@+id/new_worries_0"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="0"
+                    android:padding="16dp"
+                    android:text="Mejorar la apariencia de líneas de expresión y arrugas"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/new_worries_1"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="1"
+                    android:padding="16dp"
+                    android:text="Protección contra el daño solar"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_2"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="2"
+                    android:padding="16dp"
+                    android:text="Mejorar la textura de la piel y minimizar los poros"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_3"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="3"
+                    android:padding="16dp"
+                    android:text="Reafirmar la piel"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_4"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="4"
+                    android:padding="16dp"
+                    android:text="Conseguir un extra de hidratación"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_5"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="5"
+                    android:padding="16dp"
+                    android:text="Hidratar y minimizar las arrugas alrededor de los ojos"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_6"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="6"
+                    android:padding="16dp"
+                    android:text="Suavizar los ojos cansados"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_7"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="7"
+                    android:padding="16dp"
+                    android:text="Desmaquillar mi piel de una manera suave"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_8"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="8"
+                    android:padding="16dp"
+                    android:text="Reducir finas líneas y arrugas alrededor de los labios"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_9"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="9"
+                    android:padding="16dp"
+                    android:text="Suavizar los labios secos"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/new_worries_10"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="CheckBoxPreoc"
+                    android:hint="10"
+                    android:padding="16dp"
+                    android:text="Igualar el tono de piel y reducir manchas oscuras"
+                    android:textSize="15sp"/>
+             </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>

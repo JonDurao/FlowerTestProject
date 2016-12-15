@@ -1,0 +1,168 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/rutina_title"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="Mi rutina diaria es"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:id="@+id/button_layout_sixth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <ImageView
+            android:id="@+id/sixth_backward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_left_arrow"/>
+
+        <ImageView
+            android:id="@+id/sixth_forward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_right_arrow"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/rutina_grupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rutina_title"
+        android:layout_above="@id/button_layout_sixth">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <CheckBox
+                android:id="@+id/rutina_0"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="CheckBoxPreoc"
+                android:hint="0"
+                android:padding="16dp"
+                android:text="Limpiar"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/rutina_1"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="CheckBoxPreoc"
+                android:hint="1"
+                android:padding="16dp"
+                android:text="Proteccion Solar"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/rutina_2"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="CheckBoxPreoc"
+                android:hint="2"
+                android:padding="16dp"
+                android:text="Base de Maquillaje"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/rutina_3"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="CheckBoxPreoc"
+                android:hint="3"
+                android:padding="16dp"
+                android:text="Tonificar y Refrescar"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/rutina_4"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="CheckBoxPreoc"
+                android:hint="4"
+                android:padding="16dp"
+                android:text="Hidratacion"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/rutina_5"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="CheckBoxPreoc"
+                android:hint="5"
+                android:padding="16dp"
+                android:text="Mascarilla"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/rutina_6"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="CheckBoxPreoc"
+                android:hint="6"
+                android:padding="16dp"
+                android:text="Productos para igualar el tono de piel"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/rutina_7"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="CheckBoxPreoc"
+                android:hint="7"
+                android:padding="16dp"
+                android:text="Cuidado del contorno del ojo"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/otra_rutina_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Otra"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/otra_rutina_edit"
+                android:background="@color/colorAccentDark"
+                android:gravity="left"
+                android:hint="Otra"
+                android:maxLength="30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

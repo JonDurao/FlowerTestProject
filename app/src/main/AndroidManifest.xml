@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jondurao.flowersdream">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_flower"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FirstStepForm"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgendaActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ContactoDetallesActivity" />
+        <activity android:name=".SecondStepForm" />
+        <activity android:name=".ThirdStepForm" />
+        <activity android:name=".FourthStepForm" />
+        <activity android:name=".FifthStepForm" />
+        <activity android:name=".SixthStepForm" />
+        <activity android:name=".SeventhStepForm" />
+        <activity android:name=".EighthStepForm" />
+        <activity android:name=".NinthStepForm" />
+        <activity android:name=".TenthStepForm" />
+        <activity android:name=".EleventhStepForm" />
+        <activity android:name=".TwelfthStepForm" />
+        <activity android:name=".ThirteenthStepForm"></activity>
+    </application>
+
+</manifest>

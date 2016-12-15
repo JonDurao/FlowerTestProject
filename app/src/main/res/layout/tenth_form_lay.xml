@@ -1,0 +1,93 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/button_layout_tenth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/tenth_backward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_left_arrow"/>
+
+        <ImageView
+            android:id="@+id/tenth_forward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_right_arrow"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/productos_maquillaje_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@id/button_layout_tenth"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/productos_vivir_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fecha_edit"
+            android:padding="8dp"
+            android:text="No puedo vivir sin"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/productos_vivir_edit"
+            android:background="@color/colorAccentDark"
+            android:gravity="left"
+            android:inputType="text"
+            android:hint="Productos"
+            android:maxLength="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productos_vivir_label"
+            android:padding="8dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/otras_marcas_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productos_vivir_edit"
+            android:padding="8dp"
+            android:text="Uso las marcas"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/otras_marcas_edit"
+            android:background="@color/colorAccentDark"
+            android:gravity="left"
+            android:inputType="text"
+            android:hint="Marcas"
+            android:maxLength="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otras_marcas_label"
+            android:padding="8dp"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

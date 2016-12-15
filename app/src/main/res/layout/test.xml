@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/otra_preocupacion_title"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:text="Otras preocupacion:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otra_preocupacion_title">
+
+        <RadioGroup
+            android:id="@+id/mayor_preocupacion_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:text="Mejorar las profundas líneas de expresión"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="1"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:text="Minimizar finas lineas de expresión"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="2"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:text="Cuidado sencillo para una piel joven"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <RadioButton
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="3"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:text="Controlar y prevenir grasa y ácne"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <RadioButton
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="4"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:text="Disminuir las zonas oscuras y bolsas"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <RadioButton
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="5"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:text="Una piel sensible y final"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <RadioButton
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="6"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:text="Reducir las manchas oscuras e igualar el tono facial"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <RadioButton
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="7"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:text="Lo básico: limpiar, exfoliar e hidratar"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/fourth_backward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_left_arrow"/>
+
+        <ImageView
+            android:id="@+id/fourth_forward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_right_arrow"/>
+    </LinearLayout>
+
+</RelativeLayout>
