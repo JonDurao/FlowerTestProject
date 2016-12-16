@@ -52,6 +52,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String CLIENTA_COLUMNA_FORMA_OJOS = "ColumnaFormaOjos";
     public static final String CLIENTA_COLUMNA_FORMA_CARA = "ColumnaFormaCara";
     public static final String CLIENTA_COLUMNA_SABER_MAS = "ColumnaSaberMas";
+    public static final String CLIENTA_COLUMNA_NO_PUEDO_VIVIR = "ColumnaNoPuedoVivir";
+    public static final String CLIENTA_COLUMNA_OTRAS_MARCAS = "ColumnaOtrasMarcas";
+    public static final String CLIENTA_COLUMNA_OTROS_PRODUCTOS_COMPRAR = "ColumnaOtrosProductosComprar";
 
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NAME + " (" +
@@ -80,7 +83,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     CLIENTA_COLUMNA_FORMA_LABIOS + TEXT_TYPE + COMMA_SEP +
                     CLIENTA_COLUMNA_FORMA_OJOS + TEXT_TYPE + COMMA_SEP +
                     CLIENTA_COLUMNA_FORMA_CARA + TEXT_TYPE + COMMA_SEP +
-                    CLIENTA_COLUMNA_SABER_MAS + TEXT_TYPE + " )";
+                    CLIENTA_COLUMNA_SABER_MAS + TEXT_TYPE + COMMA_SEP +
+                    CLIENTA_COLUMNA_NO_PUEDO_VIVIR + TEXT_TYPE + COMMA_SEP +
+                    CLIENTA_COLUMNA_OTRAS_MARCAS + TEXT_TYPE + COMMA_SEP +
+                    CLIENTA_COLUMNA_OTROS_PRODUCTOS_COMPRAR + TEXT_TYPE + " )";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -132,6 +138,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         cv.put(CLIENTA_COLUMNA_FORMA_OJOS, contactos.get_formaOjos());
         cv.put(CLIENTA_COLUMNA_FORMA_CARA, contactos.get_formaCara());
         cv.put(CLIENTA_COLUMNA_SABER_MAS, contactos.get_saberMas());
+        cv.put(CLIENTA_COLUMNA_NO_PUEDO_VIVIR, contactos.get_noPuedoVivir());
+        cv.put(CLIENTA_COLUMNA_OTRAS_MARCAS, contactos.get_otrasMarcas());
+        cv.put(CLIENTA_COLUMNA_OTROS_PRODUCTOS_COMPRAR, contactos.get_otrosProductosComprar());
 
         db.insert(TABLE_NAME, null, cv);
         db.close();
@@ -147,7 +156,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 CLIENTA_COLUMNA_CUMPLEAÑOS, CLIENTA_COLUMNA_ANIVERSARIO, CLIENTA_COLUMNA_PROFESION, CLIENTA_COLUMNA_TIPO_PIEL,
                 CLIENTA_COLUMNA_MAYOR_PREOCUPACION, CLIENTA_COLUMNA_OTRA_PREOCUPACION, CLIENTA_COLUMNA_RUTINA_DIARIA,
                 CLIENTA_COLUMNA_BENEFICIO_MASCARA, CLIENTA_COLUMNA_TIPO_PIEL, CLIENTA_COLUMNA_TONOS_MAQUILLAJE, CLIENTA_COLUMNA_COLOR_PELO,
-                CLIENTA_COLUMNA_COLOR_OJOS, CLIENTA_COLUMNA_FORMA_LABIOS, CLIENTA_COLUMNA_FORMA_OJOS, CLIENTA_COLUMNA_FORMA_CARA, CLIENTA_COLUMNA_SABER_MAS},
+                CLIENTA_COLUMNA_COLOR_OJOS, CLIENTA_COLUMNA_FORMA_LABIOS, CLIENTA_COLUMNA_FORMA_OJOS, CLIENTA_COLUMNA_FORMA_CARA, CLIENTA_COLUMNA_SABER_MAS,
+                CLIENTA_COLUMNA_NO_PUEDO_VIVIR, CLIENTA_COLUMNA_OTRAS_MARCAS, CLIENTA_COLUMNA_OTROS_PRODUCTOS_COMPRAR},
                 CLIENTA_ID + "=?",
                 new String[] {String.valueOf(id)}, null, null, null, null);
 
@@ -160,7 +170,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 cursor.getString(7), cursor.getString(8), cursor.getString(9), cursor.getString(10), cursor.getString(11),
                 cursor.getString(12), cursor.getString(13), cursor.getString(14), cursor.getString(15), cursor.getString(16),
                 cursor.getString(17), cursor.getString(18), cursor.getString(19), cursor.getString(20), cursor.getString(21),
-                cursor.getString(22), cursor.getString(23), cursor.getString(24), cursor.getString(25));
+                cursor.getString(22), cursor.getString(23), cursor.getString(24), cursor.getString(25), cursor.getString(26),
+                cursor.getString(27), cursor.getString(28));
         return cd;
     }
 
@@ -203,6 +214,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 contactos.set_formaOjos(cursor.getString(23));
                 contactos.set_formaCara(cursor.getString(24));
                 contactos.set_saberMas(cursor.getString(25));
+                contactos.set_noPuedoVivir(cursor.getString(26));
+                contactos.set_otrasMarcas(cursor.getString(27));
+                contactos.set_otrosProductosComprar(cursor.getString(28));
 
                 // Adding contact to list
                 contactList.add(contactos);

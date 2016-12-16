@@ -433,5 +433,23 @@
             android:text="Placeholder"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/saber_mas_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Saber mas sobre"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/saber_mas_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
     </LinearLayout>
 </ScrollView>

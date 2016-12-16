@@ -46,6 +46,7 @@ public class ContactoDetallesActivity extends AppCompatActivity {
         CheckFullness(contacto.get_formaLabios(), findViewById(R.id.labios_forma_label), (TextView) findViewById(R.id.labios_forma_detalle));
         CheckFullness(contacto.get_formaOjos(), findViewById(R.id.ojos_forma_label), (TextView) findViewById(R.id.ojos_forma_detalle));
         CheckFullness(contacto.get_formaCara(), findViewById(R.id.cara_forma_label), (TextView) findViewById(R.id.cara_forma_detalle));
+        CheckFullness(contacto.get_saberMas(), this.getResources().getStringArray(R.array.saber_mas), findViewById(R.id.saber_mas_label), (TextView) findViewById(R.id.saber_mas_detalle));
     }
 
     private void CheckFullness(String info, View tvLabel, TextView tvDetalle){

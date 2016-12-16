@@ -1,13 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/twelfth_form_lay"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jondurao.flowersdream.TwelfthStepForm">
+        android:background="@color/colorAccent"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/no_puedo_vivir_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="8dp"
+            android:text="No puedo vivir sin"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/no_puedo_vivir_edit"
+            android:background="@color/colorAccentDark"
+            android:gravity="left"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_puedo_vivir_label"
+            android:padding="8dp"
+            android:hint="Productos"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/otras_marcas_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_puedo_vivir_edit"
+            android:padding="8dp"
+            android:text="Que otras marcas uso"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/otras_marcas_edit"
+            android:background="@color/colorAccentDark"
+            android:gravity="left"
+            android:inputType="textPersonName"
+            android:hint="Marcas"
+            android:maxLength="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otras_marcas_label"
+            android:padding="8dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/otros_productos_comprar_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otras_marcas_edit"
+            android:padding="8dp"
+            android:text="Otros productos que me gustaria comprar"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/otros_productos_comprar_edit"
+            android:background="@color/colorAccentDark"
+            android:gravity="left"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otros_productos_comprar_label"
+            android:padding="8dp"
+            android:hint="Productos"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"
+                android:src="@drawable/ic_left_arrow"/>
+
+            <ImageView
+                android:id="@+id/tenth_forward_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"
+                android:src="@drawable/ic_right_arrow"/>
+        </LinearLayout>
+
+    </RelativeLayout>

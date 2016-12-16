@@ -1,6 +1,7 @@
 package com.example.jondurao.flowersdream;
 
 import java.io.Serializable;
+import java.io.StringReader;
 
 /**
  * Created by jondurao on 7/11/16.
@@ -10,7 +11,7 @@ public class ContactosDatabase implements Serializable{
     int _id;
     String _fecha, _nombre, _email, _movil, _casa, _trabajo, _turno, _metodoContacto, _direccion, _cumpleaños, _aniversario,
             _profesion, _tipoPiel, _mayorPreocupacion, _otrasPreocupaciones, _rutinaDiaria, _beneficioMascara, _tipoCobertura, _tonosMaquillaje,
-            _colorPelo, _colorOjos, _formaLabios, _formaOjos, _formaCara, _saberMas;
+            _colorPelo, _colorOjos, _formaLabios, _formaOjos, _formaCara, _saberMas, _noPuedoVivir, _otrasMarcas, _otrosProductosComprar;
 
     public ContactosDatabase(){
 
@@ -19,7 +20,8 @@ public class ContactosDatabase implements Serializable{
     public ContactosDatabase(int id, String fecha, String nombre, String email, String movil, String casa, String trabajo, String turno, String metodoContacto,
                              String direccion, String cumpleaños, String aniversario, String profesion, String tipoPiel, String mayorPreocupacion,
                              String otrasPreocupaciones, String rutinaDiaria, String beneficioMascara, String tipoCobertura, String tonosMaquillaje,
-                             String colorPelo, String colorOjos, String formaLabios, String formaOjos, String formaCara, String saberMas){
+                             String colorPelo, String colorOjos, String formaLabios, String formaOjos, String formaCara, String saberMas, String noPuedoVivir,
+                             String otrasMarcas, String otrosProductosComprar){
         this._id = id;
         this._fecha = fecha;
         this._nombre = nombre;
@@ -46,6 +48,9 @@ public class ContactosDatabase implements Serializable{
         this._formaOjos = formaOjos;
         this._formaCara = formaCara;
         this._saberMas = saberMas;
+        this._noPuedoVivir = noPuedoVivir;
+        this._otrasMarcas = otrasMarcas;
+        this._otrosProductosComprar = otrosProductosComprar;
     }
 
     public int get_id(){
@@ -189,4 +194,16 @@ public class ContactosDatabase implements Serializable{
     public String get_saberMas() {return _saberMas;}
 
     public void set_saberMas(String _saberMas) {this._saberMas = _saberMas;}
+
+    public String get_noPuedoVivir() {return _noPuedoVivir;}
+
+    public void set_noPuedoVivir(String _noPuedoVivir) {this._noPuedoVivir = _noPuedoVivir;}
+
+    public String get_otrasMarcas() {return _otrasMarcas;}
+
+    public void set_otrasMarcas(String _otrasMarcas) {this._otrasMarcas = _otrasMarcas;}
+
+    public String get_otrosProductosComprar() {return _otrosProductosComprar;}
+
+    public void set_otrosProductosComprar(String _otrosProductosComprar) {this._otrosProductosComprar = _otrosProductosComprar;}
 }

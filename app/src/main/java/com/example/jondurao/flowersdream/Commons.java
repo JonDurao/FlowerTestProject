@@ -359,6 +359,10 @@ public class Commons {
             contacto.set_formaCara(RetrieveRadioGroupChecked(context, R.id.cara_forma_radio_group));
         } else if (step == 11){
             contacto.set_saberMas(getSelectedBoxesHints(context, context.getResources().getStringArray(R.array.saber_mas_botones)));
+        } else if (step == 12){
+            contacto.set_noPuedoVivir(RetrieveEditText(context, R.id.no_puedo_vivir_edit));
+            contacto.set_otrasMarcas(RetrieveEditText(context, R.id.otras_marcas_edit));
+            contacto.set_otrosProductosComprar(RetrieveEditText(context, R.id.otros_productos_comprar_edit));
         }
     }
 
@@ -550,6 +554,8 @@ public class Commons {
             }
         } else if (step == 11){
             return true;
+        } else if (step == 12){
+            return  true;
         } else{
             return false;
         }
