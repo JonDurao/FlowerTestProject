@@ -13,7 +13,7 @@ public class TenthStepForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tenth_form_lay);
 
-        ImageView forwardButton = (ImageView) findViewById(R.id.ninth_forward_button);
+        ImageView forwardButton = (ImageView) findViewById(R.id.tenth_forward_button);
 
         SetOnClickListenerForwardForm(this, forwardButton, EleventhStepForm.class, 10);
     }

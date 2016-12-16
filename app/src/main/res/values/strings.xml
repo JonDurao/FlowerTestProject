@@ -2,14 +2,4 @@
     <string name="app_name">FlowersDream</string>
     <string name="alphabet">abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ</string>
     <string name="numbers">0123456789</string>
-
-    <string-array name="saber_mas">
-        <item>
-            Soluciones para el cuidado de la piel
-        </item>
-
-        <item>
-            Fragancias y cuidado del cuerpo
-        </item>
-    </string-array>
 </resources>

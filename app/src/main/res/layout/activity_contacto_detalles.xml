@@ -343,5 +343,95 @@
             android:text="Placeholder"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/color_pelo_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Color de pelo"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/color_pelo_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/color_ojos_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Color de ojos"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/color_ojos_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/labios_forma_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Labios con forma"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/labios_forma_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/ojos_forma_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Ojos de forma"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/ojos_forma_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/cara_forma_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Cara con forma"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/cara_forma_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
     </LinearLayout>
 </ScrollView>

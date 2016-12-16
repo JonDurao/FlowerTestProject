@@ -314,7 +314,7 @@
                 android:src="@drawable/ic_left_arrow"/>
 
             <ImageView
-                android:id="@+id/first_forward_button"
+                android:id="@+id/tenth_forward_button"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"

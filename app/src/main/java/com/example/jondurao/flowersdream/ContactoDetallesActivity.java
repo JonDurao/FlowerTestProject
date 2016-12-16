@@ -38,9 +38,14 @@ public class ContactoDetallesActivity extends AppCompatActivity {
         CheckFullness(contacto.get_mayorPreocupacion(), findViewById(R.id.mayor_preocupacion_label), (TextView) findViewById(R.id.mayor_preocupacion_detalle));
         CheckFullness(contacto.get_otrasPreocupaciones(), OTRA_PREOCUPACION, findViewById(R.id.otras_preocupaciones_label), (TextView) findViewById(R.id.otras_preocupaciones_detalle));
         CheckFullness(contacto.get_rutinaDiaria(), RUTINA_DIARIA, findViewById(R.id.rutina_label), (TextView) findViewById(R.id.rutina_detalle));
-        CheckFullness(contacto.get_beneficioMascara(), BENEFICIO_MASCARA, findViewById(R.id.base_maquillaje_label), (TextView) findViewById(R.id.base_maquillaje_detalle));
-        CheckFullness(contacto.get_tipoCobertura(), TIPO_COBERTURA, findViewById(R.id.tipo_cobertura_label), (TextView) findViewById(R.id.tipo_cobertura_detalle));
-        CheckFullness(contacto.get_tonosMaquillaje(), TONOS_MAQUILLAJE, findViewById(R.id.tonos_maquillaje_label), (TextView) findViewById(R.id.tonos_maquillaje_detalle));
+        CheckFullness(contacto.get_beneficioMascara(), findViewById(R.id.base_maquillaje_label), (TextView) findViewById(R.id.base_maquillaje_detalle));
+        CheckFullness(contacto.get_tipoCobertura(), findViewById(R.id.tipo_cobertura_label), (TextView) findViewById(R.id.tipo_cobertura_detalle));
+        CheckFullness(contacto.get_tonosMaquillaje(), findViewById(R.id.tonos_maquillaje_label), (TextView) findViewById(R.id.tonos_maquillaje_detalle));
+        CheckFullness(contacto.get_colorPelo(), findViewById(R.id.color_pelo_label), (TextView) findViewById(R.id.color_pelo_detalle));
+        CheckFullness(contacto.get_colorOjos(), findViewById(R.id.color_ojos_label), (TextView) findViewById(R.id.color_ojos_detalle));
+        CheckFullness(contacto.get_formaLabios(), findViewById(R.id.labios_forma_label), (TextView) findViewById(R.id.labios_forma_detalle));
+        CheckFullness(contacto.get_formaOjos(), findViewById(R.id.ojos_forma_label), (TextView) findViewById(R.id.ojos_forma_detalle));
+        CheckFullness(contacto.get_formaCara(), findViewById(R.id.cara_forma_label), (TextView) findViewById(R.id.cara_forma_detalle));
     }
 
     private void CheckFullness(String info, View tvLabel, TextView tvDetalle){
