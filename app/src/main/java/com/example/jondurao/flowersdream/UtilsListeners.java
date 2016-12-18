@@ -3,6 +3,7 @@ package com.example.jondurao.flowersdream;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -99,4 +100,25 @@ public class UtilsListeners extends AppCompatActivity {
         });
     }
 
+    public static void SetOnClickListenerAddContact (final Activity context, FloatingActionButton button){
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                int invisibleElement = -1;
+                String[] labels = context.getResources().getStringArray(R.array.nuevos_contactos_labels_ids);
+                String[] layouts = context.getResources().getStringArray(R.array.nuevos_contactos_layouts_ids);
+
+                invisibleElement = CheckifElementsVisibleArray(context, labels);
+
+                if (invisibleElement != -1){
+                    View label = context.findViewById(context.getResources().getIdentifier(labels[invisibleElement], "id", context.getPackageName()));
+                    View layout = context.findViewById(context.getResources().getIdentifier(layouts[invisibleElement], "id", context.getPackageName()));
+
+                    label.setVisibility(View.VISIBLE);
+                    layout.setVisibility(View.VISIBLE);
+                } else {
+                    OpenAlertDialog(context, "Error", "Cinco contactos nuevos como maximo", "Ok", "");
+                }
+            }
+        });
+    }
 }

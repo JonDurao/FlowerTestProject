@@ -1,16 +1,293 @@
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/colorAccent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/colorAccent"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/nuevos_contactos_title"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp"
+                    android:text="Me gustaria saber sobre"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/nuevos_contactos_label_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_title"
+                    android:padding="8dp"
+                    android:text="Contacto"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:id="@+id/nuevos_contactos_layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_label_1"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_nombre_edit_1"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Nombre"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_telefono_edit_1"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Telefono"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/nuevos_contactos_label_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_layout_1"
+                    android:hint="Contacto 2"
+                    android:padding="8dp"
+                    android:text="Contacto"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:id="@+id/nuevos_contactos_layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_label_2"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_nombre_edit_2"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Nombre"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_telefono_edit_2"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Telefono"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/nuevos_contactos_label_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_layout_2"
+                    android:padding="8dp"
+                    android:text="Contacto"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:id="@+id/nuevos_contactos_layout_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_label_3"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_nombre_edit_3"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Nombre"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_telefono_edit_3"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Telefono"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/nuevos_contactos_label_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_layout_3"
+                    android:padding="8dp"
+                    android:text="Contacto"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:id="@+id/nuevos_contactos_layout_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_label_4"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_nombre_edit_4"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Nombre"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_telefono_edit_4"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Telefono"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/nuevos_contactos_label_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_layout_4"
+                    android:padding="8dp"
+                    android:text="Contacto"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:id="@+id/nuevos_contactos_layout_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nuevos_contactos_label_5"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_nombre_edit_5"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Nombre"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/nuevos_contactos_telefono_edit_5"
+                        android:background="@color/colorAccentDark"
+                        android:gravity="left"
+                        android:inputType="phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:hint="Telefono"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_left_arrow"/>
+
+                        <ImageView
+                            android:id="@+id/thirteenth_forward_button"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_right_arrow"/>
+                </LinearLayout>
+
+        </RelativeLayout>
+
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:backgroundTint="@color/colorPrimaryDark"
+            android:id="@+id/add_nuevo_contacto_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin" />
-</RelativeLayout>
+            android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:src="@drawable/ic_right_arrow"
+            app:layout_anchor="@id/nuevos_contactos_title"
+            app:layout_anchorGravity="bottom|right|end"/>
+
+</android.support.design.widget.CoordinatorLayout>

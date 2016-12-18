@@ -21,4 +21,20 @@
         <item>saber_mas_check_box_7</item>
         <item>saber_mas_check_box_8</item>
     </string-array>
+
+    <string-array name="nuevos_contactos_labels_ids">
+        <item>nuevos_contactos_label_1</item>
+        <item>nuevos_contactos_label_2</item>
+        <item>nuevos_contactos_label_3</item>
+        <item>nuevos_contactos_label_4</item>
+        <item>nuevos_contactos_label_5</item>
+    </string-array>
+
+    <string-array name="nuevos_contactos_layouts_ids">
+        <item>nuevos_contactos_layout_1</item>
+        <item>nuevos_contactos_layout_2</item>
+        <item>nuevos_contactos_layout_3</item>
+        <item>nuevos_contactos_layout_4</item>
+        <item>nuevos_contactos_layout_5</item>
+    </string-array>
 </resources>

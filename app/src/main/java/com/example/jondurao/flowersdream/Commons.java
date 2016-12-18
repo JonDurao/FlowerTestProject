@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -143,6 +144,23 @@ public class Commons {
                 boton.setHint(vector[i]);
             }
         }
+    }
+
+    public static int CheckifElementsVisibleArray (Activity context, String[] arrayElements){
+        int result = 0;
+
+        for (int i = 0; i < arrayElements.length; i++){
+            View label = context.findViewById(context.getResources().getIdentifier(arrayElements[i], "id", context.getPackageName()));
+
+            if (label.getVisibility() == View.INVISIBLE){
+                result = i;
+                break;
+            } else if (label.getVisibility() == View.VISIBLE && i == (arrayElements.length-1)){
+                result = -1;
+            }
+        }
+
+        return result;
     }
 
     public static void OpenAlertDialog(final Activity context, String title, String message, String button, final String action){
