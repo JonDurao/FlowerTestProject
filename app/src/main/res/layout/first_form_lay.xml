@@ -1,280 +1,291 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorAccent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:padding="8dp"
+    <LinearLayout
+        android:id="@+id/button_layout_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_left_arrow"/>
+
+        <ImageView
+            android:id="@+id/first_forward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_right_arrow"/>
+    </LinearLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_above="@id/button_layout_first"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/fecha_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:padding="8dp"
-            android:text="Fecha"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp"/>
-
-        <EditText
-            android:id="@+id/fecha_edit"
-            android:background="@color/colorAccentDark"
-            android:digits="@string/numbers"
-            android:gravity="left"
-            android:inputType="date"
-            android:maxLength="10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/fecha_label"
-            android:padding="8dp"
-            android:hint="dd/mm/YYYY"
-            android:textSize="15sp"/>
-
-        <TextView
-            android:id="@+id/nombre_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/fecha_edit"
-            android:padding="8dp"
-            android:text="Nombre"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp"/>
-
-        <EditText
-            android:id="@+id/nombre_edit"
-            android:background="@color/colorAccentDark"
-            android:gravity="left"
-            android:inputType="textPersonName"
-            android:hint="Nombre"
-            android:maxLength="30"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/nombre_label"
-            android:padding="8dp"
-            android:textSize="15sp"/>
-
-        <TextView
-            android:id="@+id/email_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/nombre_edit"
-            android:padding="8dp"
-            android:text="Email"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp"/>
-
-        <EditText
-            android:id="@+id/email_edit"
-            android:background="@color/colorAccentDark"
-            android:gravity="left"
-            android:inputType="textEmailAddress"
-            android:hint="Email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/email_label"
-            android:padding="8dp"
-            android:textSize="15sp"/>
-
-        <TextView
-            android:id="@+id/telefonos_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/email_edit"
-            android:padding="8dp"
-            android:text="Telefonos de contacto"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp"/>
-
-        <EditText
-            android:id="@+id/movil_edit"
-            android:background="@color/colorAccentDark"
-            android:digits="@string/numbers"
-            android:gravity="left"
-            android:inputType="number"
-            android:hint="Movil"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/telefonos_label"
-            android:layout_marginBottom="8dp"
-            android:maxLength="9"
-            android:padding="8dp"
-            android:textSize="15sp"/>
-
-        <EditText
-            android:id="@+id/casa_edit"
-            android:background="@color/colorAccentDark"
-            android:digits="@string/numbers"
-            android:gravity="left"
-            android:inputType="number"
-            android:hint="Casa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/movil_edit"
-            android:layout_marginBottom="8dp"
-            android:maxLength="9"
-            android:padding="8dp"
-            android:textSize="15sp"/>
-
-        <EditText
-            android:id="@+id/trabajo_edit"
-            android:background="@color/colorAccentDark"
-            android:digits="@string/numbers"
-            android:gravity="left"
-            android:inputType="number"
-            android:hint="Trabajo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/casa_edit"
-            android:layout_marginBottom="8dp"
-            android:maxLength="9"
-            android:padding="8dp"
-            android:textSize="15sp"/>
-
         <RelativeLayout
-            android:id="@+id/contactar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/trabajo_edit"
-            android:padding="8dp">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/mejor_momento_label"
-                android:gravity="center"
-                android:layout_width="wrap_content"
+                android:id="@+id/fecha_label"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
+                android:layout_alignParentTop="true"
                 android:padding="8dp"
-                android:text="Contactar:"
+                android:text="Fecha"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="15sp"/>
 
-            <RadioGroup
-                android:id="@+id/turnos_radio_group"
+            <EditText
+                android:id="@+id/fecha_edit"
+                android:background="@color/colorAccentDark"
+                android:digits="@string/numbers"
+                android:gravity="left"
+                android:inputType="date"
+                android:maxLength="10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/mejor_momento_label"
-                android:paddingLeft="8dp"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/mañana_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:checked="true"
-                    android:hint="Mañana"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="16dp"
-                    android:text="Mañana"
-                    android:textSize="12sp"/>
-
-                <RadioButton
-                    android:id="@+id/tarde_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Tarde"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="16dp"
-                    android:text="Tarde"
-                    android:textSize="12sp"/>
-            </RadioGroup>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/preferencia_contacto_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/contactar_layout"
-            android:padding="8dp">
+                android:layout_below="@id/fecha_label"
+                android:padding="8dp"
+                android:hint="dd/mm/YYYY"
+                android:textSize="15sp"/>
 
             <TextView
-                android:id="@+id/mejor_metodo_contacto_label"
-                android:gravity="center"
-                android:layout_width="wrap_content"
+                android:id="@+id/nombre_label"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
+                android:layout_below="@id/fecha_edit"
                 android:padding="8dp"
-                android:text="Por: "
+                android:text="Nombre"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="15sp"/>
 
-            <RadioGroup
-                android:id="@+id/opciones_contacto_radio_group"
+            <EditText
+                android:id="@+id/nombre_edit"
+                android:background="@color/colorAccentDark"
+                android:gravity="left"
+                android:inputType="textPersonName"
+                android:hint="Nombre"
+                android:maxLength="30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/mejor_metodo_contacto_label"
+                android:layout_below="@id/nombre_label"
                 android:padding="8dp"
-                android:orientation="vertical">
+                android:textSize="15sp"/>
 
-                <RadioButton
-                    android:id="@+id/telefono_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:checked="true"
-                    android:hint="Telefono"
-                    android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nombre_edit"
+                android:padding="8dp"
+                android:text="Email"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/email_edit"
+                android:background="@color/colorAccentDark"
+                android:gravity="left"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_label"
+                android:padding="8dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/telefonos_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_edit"
+                android:padding="8dp"
+                android:text="Telefonos de contacto"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/movil_edit"
+                android:background="@color/colorAccentDark"
+                android:digits="@string/numbers"
+                android:gravity="left"
+                android:inputType="number"
+                android:hint="Movil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/telefonos_label"
+                android:layout_marginBottom="8dp"
+                android:maxLength="9"
+                android:padding="8dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/casa_edit"
+                android:background="@color/colorAccentDark"
+                android:digits="@string/numbers"
+                android:gravity="left"
+                android:inputType="number"
+                android:hint="Casa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movil_edit"
+                android:layout_marginBottom="8dp"
+                android:maxLength="9"
+                android:padding="8dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/trabajo_edit"
+                android:background="@color/colorAccentDark"
+                android:digits="@string/numbers"
+                android:gravity="left"
+                android:inputType="number"
+                android:hint="Trabajo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/casa_edit"
+                android:layout_marginBottom="8dp"
+                android:maxLength="9"
+                android:padding="8dp"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:id="@+id/contactar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trabajo_edit"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/mejor_momento_label"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="16dp"
-                    android:text="Telefono"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:minWidth="90dp"
+                    android:padding="8dp"
+                    android:text="Contactar:"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"/>
 
-                <RadioButton
-                    android:id="@+id/mensaje_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Mensaje"
+                <RadioGroup
+                    android:id="@+id/turnos_radio_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="16dp"
-                    android:text="Mensaje"
+                    android:layout_toRightOf="@id/mejor_momento_label"
+                    android:paddingLeft="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/mañana_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:checked="true"
+                        android:hint="Mañana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:text="Mañana"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/tarde_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Tarde"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:text="Tarde"
+                        android:textSize="12sp"/>
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/preferencia_contacto_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactar_layout"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/mejor_metodo_contacto_label"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:minWidth="90dp"
+                    android:padding="8dp"
+                    android:text="Por: "
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"/>
 
-                <RadioButton
-                    android:id="@+id/email_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Email"
+                <RadioGroup
+                    android:id="@+id/opciones_contacto_radio_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="16dp"
-                    android:text="Email"
-                    android:textSize="15sp"/>
-            </RadioGroup>
+                    android:layout_toRightOf="@id/mejor_metodo_contacto_label"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/telefono_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:checked="true"
+                        android:hint="Telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:text="Telefono"
+                        android:textSize="15sp"/>
+
+                    <RadioButton
+                        android:id="@+id/mensaje_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Mensaje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:text="Mensaje"
+                        android:textSize="15sp"/>
+
+                    <RadioButton
+                        android:id="@+id/email_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:text="Email"
+                        android:textSize="15sp"/>
+                </RadioGroup>
+            </RelativeLayout>
         </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@id/preferencia_contacto_layout"
-            android:paddingBottom="16dp">
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_left_arrow"/>
-
-            <ImageView
-                android:id="@+id/first_forward_button"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_right_arrow"/>
-        </LinearLayout>
+    </ScrollView>
 
     </RelativeLayout>
-
-</ScrollView>

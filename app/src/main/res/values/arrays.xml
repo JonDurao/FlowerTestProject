@@ -37,4 +37,36 @@
         <item>nuevos_contactos_layout_4</item>
         <item>nuevos_contactos_layout_5</item>
     </string-array>
+
+    <string-array name="nuevos_contactos_names_ids">
+        <item>nuevos_contactos_nombre_edit_1</item>
+        <item>nuevos_contactos_nombre_edit_2</item>
+        <item>nuevos_contactos_nombre_edit_3</item>
+        <item>nuevos_contactos_nombre_edit_4</item>
+        <item>nuevos_contactos_nombre_edit_5</item>
+    </string-array>
+
+    <string-array name="nuevos_contactos_telephones_ids">
+        <item>nuevos_contactos_telefono_edit_1</item>
+        <item>nuevos_contactos_telefono_edit_2</item>
+        <item>nuevos_contactos_telefono_edit_3</item>
+        <item>nuevos_contactos_telefono_edit_4</item>
+        <item>nuevos_contactos_telefono_edit_5</item>
+    </string-array>
+
+    <string-array name="nuevos_contactos_detalle_label_ids">
+        <item>nuevo_contacto_label_1</item>
+        <item>nuevo_contacto_label_2</item>
+        <item>nuevo_contacto_label_3</item>
+        <item>nuevo_contacto_label_4</item>
+        <item>nuevo_contacto_label_5</item>
+    </string-array>
+
+    <string-array name="nuevos_contactos_detalle_ids">
+        <item>nuevo_contacto_detalle_1</item>
+        <item>nuevo_contacto_detalle_2</item>
+        <item>nuevo_contacto_detalle_3</item>
+        <item>nuevo_contacto_detalle_4</item>
+        <item>nuevo_contacto_detalle_5</item>
+    </string-array>
 </resources>

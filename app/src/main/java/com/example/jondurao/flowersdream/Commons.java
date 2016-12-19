@@ -381,6 +381,20 @@ public class Commons {
             contacto.set_noPuedoVivir(RetrieveEditText(context, R.id.no_puedo_vivir_edit));
             contacto.set_otrasMarcas(RetrieveEditText(context, R.id.otras_marcas_edit));
             contacto.set_otrosProductosComprar(RetrieveEditText(context, R.id.otros_productos_comprar_edit));
+        } else if (step == 13){
+            String[] nombres = context.getResources().getStringArray(R.array.nuevos_contactos_names_ids);
+            String[] telefonos = context.getResources().getStringArray(R.array.nuevos_contactos_telephones_ids);
+            String nombre = "", telefono = "", total = "";
+
+            for (int i = 0; i < nombres.length; i++){
+                nombre = RetrieveEditText(context, context.getResources().getIdentifier(nombres[i], "id", context.getPackageName()));
+                if (!nombre.isEmpty()){
+                    telefono = RetrieveEditText(context, context.getResources().getIdentifier(telefonos[i], "id", context.getPackageName()));
+                    total = total + nombre + "-" + telefono + "/";
+                }
+            }
+
+            contacto.set_nuevoContacto(total);
         }
     }
 
@@ -413,59 +427,61 @@ public class Commons {
             EditText movilEdit = (EditText) context.findViewById(R.id.movil_edit);
             EditText casaEdit = (EditText) context.findViewById(R.id.casa_edit);
             EditText trabajoEdit = (EditText) context.findViewById(R.id.trabajo_edit);
-
-            if (RetrieveEditText(context, R.id.fecha_edit).isEmpty()) {
-                erroresDatos.add("MissingDate");
-                fechaEdit.setError("Introduce una fecha");
-            } else {
-                if (erroresDatos.contains("MissingDate")) {
-                    fechaEdit.setError(null);
-                    erroresDatos.remove("MissingDate");
+            RadioGroup rg = (RadioGroup) context.findViewById(R.id.turnos_radio_group);
+            RadioGroup rg2 = (RadioGroup) context.findViewById(R.id.opciones_contacto_radio_group);
+            try {
+                if (RetrieveEditText(context, R.id.fecha_edit).isEmpty()) {
+                    erroresDatos.add("MissingDate");
+                    fechaEdit.setError("Introduce una fecha");
+                } else {
+                    if (erroresDatos.contains("MissingDate")) {
+                        fechaEdit.setError(null);
+                        erroresDatos.remove("MissingDate");
+                    }
                 }
-            }
 
-            if (RetrieveEditText(context, R.id.nombre_edit).isEmpty()) {
-                erroresDatos.add("MissingName");
-                nombreEdit.setError("Introduce un nombre");
-            } else {
-                if (erroresDatos.contains("MissingName")) {
-                    nombreEdit.setError(null);
-                    erroresDatos.remove("MissingName");
+                if (RetrieveEditText(context, R.id.nombre_edit).isEmpty()) {
+                    erroresDatos.add("MissingName");
+                    nombreEdit.setError("Introduce un nombre");
+                } else {
+                    if (erroresDatos.contains("MissingName")) {
+                        nombreEdit.setError(null);
+                        erroresDatos.remove("MissingName");
+                    }
                 }
-            }
 
-            if (RetrieveEditText(context, R.id.email_edit).isEmpty()
-                    || !RetrieveEditText(context, R.id.email_edit).contains("@")
-                    || !RetrieveEditText(context, R.id.email_edit).contains(".")) {
-                erroresDatos.add("MissingEmail");
-                emailEdit.setError("Introduce un Email");
-            } else {
-                if (erroresDatos.contains("MissingEmail")) {
-                    emailEdit.setError(null);
-                    erroresDatos.remove("MissingEmail");
+                if (RetrieveEditText(context, R.id.movil_edit).isEmpty()
+                        && RetrieveEditText(context, R.id.casa_edit).isEmpty()
+                        && RetrieveEditText(context, R.id.trabajo_edit).isEmpty() && (RetrieveEditText(context, R.id.email_edit).isEmpty()
+                        || !RetrieveEditText(context, R.id.email_edit).contains("@")
+                        || !RetrieveEditText(context, R.id.email_edit).contains("."))){
+                    erroresDatos.add("MissingContact");
+                    emailEdit.setError("Introduce un Contacto");
+                    movilEdit.setError("Introduce un Contacto");
+                    casaEdit.setError("Introduce un Contacto");
+                    trabajoEdit.setError("Introduce un Contacto");
+                } else {
+                    if (erroresDatos.contains("MissingContact")) {
+                        emailEdit.setError(null);
+                        movilEdit.setError(null);
+                        casaEdit.setError(null);
+                        trabajoEdit.setError(null);
+                        erroresDatos.remove("MissingContact");
+                    }
                 }
-            }
 
-            if (RetrieveEditText(context, R.id.movil_edit).isEmpty()
-                    && RetrieveEditText(context, R.id.casa_edit).isEmpty()
-                    && RetrieveEditText(context, R.id.trabajo_edit).isEmpty()) {
-                erroresDatos.add("MissingPhone");
-
-                movilEdit.setError("Introduce al menos un telefono");
-                casaEdit.setError("Introduce al menos un telefono");
-                trabajoEdit.setError("Introduce al menos un telefono");
-            } else {
-                if (erroresDatos.contains("MissingPhone")) {
-                    movilEdit.setError(null);
-                    casaEdit.setError(null);
-                    trabajoEdit.setError(null);
-                    erroresDatos.remove("MissingPhone");
+                if (rg.getCheckedRadioButtonId() != -1 && rg2.getCheckedRadioButtonId() != -1) {
+                    if (erroresDatos.isEmpty()) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    OpenAlertDialog(context, "Error", "Selecciona uno de los valores para los 2 grupos", "Ok", "");
+                    return false;
                 }
-            }
-
-            if (erroresDatos.isEmpty()) {
-                return true;
-            } else {
+            } catch (Exception e) {
+                OpenAlertDialog(context, "Error", "No has seleccionado ningun tipo de piel", "OK", null);
                 return false;
             }
         } else if (step == 2) {
@@ -492,6 +508,7 @@ public class Commons {
                 if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
+                    OpenAlertDialog(context, "Error", "Selecciona uno de los valores", "Ok", "");
                     return false;
                 }
             } catch (Exception e) {
@@ -506,6 +523,7 @@ public class Commons {
                 if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
+                    OpenAlertDialog(context, "Error", "Selecciona uno de los valores", "Ok", "");
                     return false;
                 }
             } catch (Exception e) {
@@ -523,6 +541,7 @@ public class Commons {
                 if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
+                    OpenAlertDialog(context, "Error", "Selecciona uno de los valores", "Ok", "");
                     return false;
                 }
             } catch (Exception e) {
@@ -536,6 +555,7 @@ public class Commons {
                 if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
+                    OpenAlertDialog(context, "Error", "Selecciona uno de los valores", "Ok", "");
                     return false;
                 }
             } catch (Exception e) {
@@ -549,6 +569,7 @@ public class Commons {
                 if (rg.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
+                    OpenAlertDialog(context, "Error", "Selecciona uno de los valores", "Ok", "");
                     return false;
                 }
             } catch (Exception e) {
@@ -564,17 +585,20 @@ public class Commons {
                 if (rg1.getCheckedRadioButtonId() != -1 && rg2.getCheckedRadioButtonId() != -1 && rg3.getCheckedRadioButtonId() != -1) {
                     return true;
                 } else {
+                    OpenAlertDialog(context, "Error", "Selecciona uno de los valores en todos los grupos", "Ok", "");
                     return false;
                 }
             } catch (Exception e) {
                 OpenAlertDialog(context, "Error", "Selecciona un elemento en cada grupo", "OK", null);
                 return false;
             }
-        } else if (step == 11){
+        } else if (step == 11) {
             return true;
-        } else if (step == 12){
-            return  true;
-        } else{
+        } else if (step == 12) {
+            return true;
+        } else if (step == 13) {
+            return true;
+        } else {
             return false;
         }
     }

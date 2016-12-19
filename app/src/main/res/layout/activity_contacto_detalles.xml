@@ -451,5 +451,154 @@
             android:text="Placeholder"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/no_puedo_vivir_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="No puede vivir sin"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/no_puedo_vivir_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/otras_marcas_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Otras Marcas"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/otras_marcas_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/otros_productos_comprar_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Otros productos que quiere comprar"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/otros_productos_comprar_detalle"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/nuevo_contacto_label_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Contacto"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/nuevo_contacto_detalle_1"
+            android:editable="false"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/nuevo_contacto_label_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Contacto"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/nuevo_contacto_detalle_2"
+            android:editable="false"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/nuevo_contacto_label_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Contacto"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/nuevo_contacto_detalle_3"
+            android:editable="false"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/nuevo_contacto_label_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Contacto"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/nuevo_contacto_detalle_4"
+            android:editable="false"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/nuevo_contacto_label_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Contacto"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/nuevo_contacto_detalle_5"
+            android:editable="false"
+            android:background="@drawable/border_element"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"/>
     </LinearLayout>
 </ScrollView>

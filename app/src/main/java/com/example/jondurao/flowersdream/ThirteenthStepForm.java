@@ -3,6 +3,7 @@ package com.example.jondurao.flowersdream;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import static com.example.jondurao.flowersdream.UtilsListeners.*;
 
@@ -15,5 +16,8 @@ public class ThirteenthStepForm extends AppCompatActivity {
 
         FloatingActionButton floatBb = (FloatingActionButton) findViewById(R.id.add_nuevo_contacto_button);
         SetOnClickListenerAddContact(this, floatBb);
+
+        ImageView forwardButton = (ImageView) findViewById(R.id.thirteenth_forward_button);
+        SetOnClickListenerForwardFinalForm(this, forwardButton, 13);
     }
 }

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EdgeEffect;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -47,6 +49,10 @@ public class ContactoDetallesActivity extends AppCompatActivity {
         CheckFullness(contacto.get_formaOjos(), findViewById(R.id.ojos_forma_label), (TextView) findViewById(R.id.ojos_forma_detalle));
         CheckFullness(contacto.get_formaCara(), findViewById(R.id.cara_forma_label), (TextView) findViewById(R.id.cara_forma_detalle));
         CheckFullness(contacto.get_saberMas(), this.getResources().getStringArray(R.array.saber_mas), findViewById(R.id.saber_mas_label), (TextView) findViewById(R.id.saber_mas_detalle));
+        CheckFullness(contacto.get_noPuedoVivir(), findViewById(R.id.no_puedo_vivir_label), (TextView) findViewById(R.id.no_puedo_vivir_detalle));
+        CheckFullness(contacto.get_otrasMarcas(), findViewById(R.id.otras_marcas_label), (TextView) findViewById(R.id.otras_marcas_detalle));
+        CheckFullness(contacto.get_otrosProductosComprar(), findViewById(R.id.otros_productos_comprar_label), (TextView) findViewById(R.id.otros_productos_comprar_detalle));
+        CheckFullness(contacto.get_nuevoContacto(), getResources().getStringArray(R.array.nuevos_contactos_detalle_label_ids), getResources().getStringArray(R.array.nuevos_contactos_detalle_ids));
     }
 
     private void CheckFullness(String info, View tvLabel, TextView tvDetalle){
@@ -55,6 +61,33 @@ public class ContactoDetallesActivity extends AppCompatActivity {
             tvDetalle.setVisibility(View.GONE);
         }else {
             tvDetalle.setText(info);
+        }
+    }
+
+    private void CheckFullness(String info, String[] labels, String[] detalles){
+        if (info.isEmpty()){
+            for (int i = 0; i < labels.length; i++){
+                findViewById(getResources().getIdentifier(labels[i], "id", getPackageName())).setVisibility(View.GONE);
+                findViewById(getResources().getIdentifier(detalles[i], "id", getPackageName())).setVisibility(View.GONE);
+            }
+        }else {
+            String[] valores = info.split("/");
+
+            if (valores.length < labels.length){
+                for (int j = valores.length; j < labels.length; j++){
+                    findViewById(getResources().getIdentifier(labels[j], "id", getPackageName())).setVisibility(View.GONE);
+                    findViewById(getResources().getIdentifier(detalles[j], "id", getPackageName())).setVisibility(View.GONE);
+                }
+            }
+
+            for (int x = 0; x < valores.length; x++){
+                String[] contacto = valores[x].split("-");
+
+                TextView nombTv = (TextView) findViewById(getResources().getIdentifier(labels[x], "id", getPackageName()));
+                EditText telefEt = (EditText) findViewById(getResources().getIdentifier(detalles[x], "id", getPackageName()));
+                nombTv.setText(contacto[0]);
+                telefEt.setText(contacto[contacto.length-1]);
+            }
         }
     }
 
