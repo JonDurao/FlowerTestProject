@@ -4,6 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/button_layout_tenth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/tenth_backward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_left_arrow"/>
+
+        <ImageView
+            android:id="@+id/tenth_forward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_right_arrow"/>
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -302,31 +327,5 @@
                 </RadioGroup>
             </RelativeLayout>
         </RelativeLayout>
-
     </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/button_layout_tenth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:padding="16dp">
-
-        <ImageView
-            android:id="@+id/tenth_backward_button"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:padding="4dp"
-            android:src="@drawable/ic_left_arrow"/>
-
-        <ImageView
-            android:id="@+id/tenth_forward_button"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:padding="4dp"
-            android:src="@drawable/ic_right_arrow"/>
-    </LinearLayout>
 </RelativeLayout>
