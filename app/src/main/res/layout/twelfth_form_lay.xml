@@ -1,8 +1,14 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:background="@color/colorAccent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
         android:padding="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/no_puedo_vivir_label"
@@ -71,31 +77,28 @@
             android:hint="Productos"
             android:textSize="15sp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="16dp">
+    </LinearLayout>
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_left_arrow"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
 
-            <ImageView
-                android:id="@+id/twelfth_forward_button"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_right_arrow"/>
-        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_left_arrow"/>
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/twelfth_forward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_right_arrow"/>
+    </LinearLayout>
+</RelativeLayout>

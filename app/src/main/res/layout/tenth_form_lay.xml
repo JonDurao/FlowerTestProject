@@ -1,329 +1,332 @@
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:padding="8dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/color_pelo_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:padding="8dp"
-            android:text="Color de Pelo"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp"/>
-
-        <EditText
-            android:id="@+id/color_pelo_edit"
-            android:background="@color/colorAccentDark"
-            android:gravity="left"
-            android:inputType="text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/color_pelo_label"
-            android:padding="8dp"
-            android:hint="Color"
-            android:textSize="15sp"/>
-
-        <TextView
-            android:id="@+id/color_ojos_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/color_pelo_edit"
-            android:padding="8dp"
-            android:text="Color de Ojos"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp"/>
-
-        <EditText
-            android:id="@+id/color_ojos_edit"
-            android:background="@color/colorAccentDark"
-            android:gravity="left"
-            android:inputType="textPersonName"
-            android:hint="Color"
-            android:maxLength="30"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/color_ojos_label"
-            android:padding="8dp"
-            android:textSize="15sp"/>
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_layout_tenth">
 
         <RelativeLayout
-            android:id="@+id/labios_forma_layout"
+            android:padding="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/color_ojos_edit"
-            android:padding="8dp">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/labios_forma_label"
-                android:gravity="left"
-                android:layout_width="wrap_content"
+                android:id="@+id/color_pelo_label"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:minWidth="70dp"
-                android:paddingTop="8dp"
-                android:text="Labios:"
+                android:layout_alignParentTop="true"
+                android:padding="8dp"
+                android:text="Color de Pelo"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="15sp"/>
 
-            <RadioGroup
-                android:id="@+id/labios_forma_radio_group"
+            <EditText
+                android:id="@+id/color_pelo_edit"
+                android:background="@color/colorAccentDark"
+                android:gravity="left"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/labios_forma_label"
-                android:paddingLeft="8dp"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/labios_forma_finos_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:checked="true"
-                    android:hint="Finos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="16dp"
-                    android:text="Finos"
-                    android:textSize="12sp"/>
-
-                <RadioButton
-                    android:id="@+id/labios_forma_medios_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Medios"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Medios"
-                    android:textSize="12sp"/>
-
-                <RadioButton
-                    android:id="@+id/labios_forma_gruesos_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Gruesos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Gruesos"
-                    android:textSize="12sp"/>
-            </RadioGroup>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/ojos_forma_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/labios_forma_layout"
-            android:padding="8dp">
+                android:layout_below="@id/color_pelo_label"
+                android:padding="8dp"
+                android:hint="Color"
+                android:textSize="15sp"/>
 
             <TextView
-                android:id="@+id/ojos_forma_label"
-                android:gravity="left"
-                android:minWidth="70dp"
-                android:layout_width="wrap_content"
+                android:id="@+id/color_ojos_label"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:paddingTop="8dp"
-                android:text="Ojos:"
+                android:layout_below="@id/color_pelo_edit"
+                android:padding="8dp"
+                android:text="Color de Ojos"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="15sp"/>
 
-            <RadioGroup
-                android:id="@+id/ojos_forma_radio_group"
+            <EditText
+                android:id="@+id/color_ojos_edit"
+                android:background="@color/colorAccentDark"
+                android:gravity="left"
+                android:inputType="textPersonName"
+                android:hint="Color"
+                android:maxLength="30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/ojos_forma_label"
-                android:paddingLeft="8dp"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/ojos_forma_estandar_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:checked="true"
-                    android:hint="Estandar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="16dp"
-                    android:text="Estandar"
-                    android:textSize="12sp"/>
-
-                <RadioButton
-                    android:id="@+id/ojos_forma_juntos_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Juntos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Juntos"
-                    android:textSize="12sp"/>
-
-                <RadioButton
-                    android:id="@+id/ojos_forma_separados_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Separados"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Separados"
-                    android:textSize="12sp"/>
-
-                <RadioButton
-                    android:id="@+id/ojos_forma_hundidos_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Hundidos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Hundidos"
-                    android:textSize="12sp"/>
-
-                <RadioButton
-                    android:id="@+id/ojos_forma_caidos_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Caidos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Caidos"
-                    android:textSize="12sp"/>
-
-                <RadioButton
-                    android:id="@+id/ojos_forma_rasgados_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Rasgados"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Rasgados"
-                    android:textSize="12sp"/>
-            </RadioGroup>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/cara_forma_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ojos_forma_layout"
-            android:padding="8dp">
-
-            <TextView
-                android:id="@+id/cara_forma_label"
-                android:gravity="left"
-                android:minWidth="70dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:paddingTop="8dp"
-                android:text="Cara:"
-                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/color_ojos_label"
+                android:padding="8dp"
                 android:textSize="15sp"/>
 
-            <RadioGroup
-                android:id="@+id/cara_forma_radio_group"
+            <RelativeLayout
+                android:id="@+id/labios_forma_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/cara_forma_label"
-                android:paddingLeft="8dp"
-                android:orientation="vertical">
+                android:layout_below="@id/color_ojos_edit"
+                android:padding="8dp">
 
-                <RadioButton
-                    android:id="@+id/cara_forma_redonda_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:checked="true"
-                    android:hint="Redonda"
+                <TextView
+                    android:id="@+id/labios_forma_label"
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:minWidth="70dp"
+                    android:paddingTop="8dp"
+                    android:text="Labios:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:id="@+id/labios_forma_radio_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="16dp"
-                    android:text="Redonda"
-                    android:textSize="12sp"/>
+                    android:layout_toRightOf="@id/labios_forma_label"
+                    android:paddingLeft="8dp"
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/cara_forma_cuadrada_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Cuadrada"
+                    <RadioButton
+                        android:id="@+id/labios_forma_finos_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:checked="true"
+                        android:hint="Finos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="16dp"
+                        android:text="Finos"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/labios_forma_medios_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Medios"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Medios"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/labios_forma_gruesos_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Gruesos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Gruesos"
+                        android:textSize="12sp"/>
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ojos_forma_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/labios_forma_layout"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/ojos_forma_label"
+                    android:gravity="left"
+                    android:minWidth="70dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="8dp"
+                    android:text="Ojos:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:id="@+id/ojos_forma_radio_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Cuadrada"
-                    android:textSize="12sp"/>
+                    android:layout_toRightOf="@id/ojos_forma_label"
+                    android:paddingLeft="8dp"
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/cara_forma_ovalada_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Ovalada"
+                    <RadioButton
+                        android:id="@+id/ojos_forma_estandar_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:checked="true"
+                        android:hint="Estandar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="16dp"
+                        android:text="Estandar"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/ojos_forma_juntos_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Juntos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Juntos"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/ojos_forma_separados_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Separados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Separados"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/ojos_forma_hundidos_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Hundidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Hundidos"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/ojos_forma_caidos_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Caidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Caidos"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/ojos_forma_rasgados_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Rasgados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Rasgados"
+                        android:textSize="12sp"/>
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cara_forma_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ojos_forma_layout"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/cara_forma_label"
+                    android:gravity="left"
+                    android:minWidth="70dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="8dp"
+                    android:text="Cara:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:id="@+id/cara_forma_radio_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Ovalada"
-                    android:textSize="12sp"/>
+                    android:layout_toRightOf="@id/cara_forma_label"
+                    android:paddingLeft="8dp"
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/cara_forma_corazon_radio_button"
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:hint="Corazon"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="4dp"
-                    android:paddingLeft="16dp"
-                    android:text="Corazon"
-                    android:textSize="12sp"/>
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/cara_forma_redonda_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:checked="true"
+                        android:hint="Redonda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="16dp"
+                        android:text="Redonda"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/cara_forma_cuadrada_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Cuadrada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Cuadrada"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/cara_forma_ovalada_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Ovalada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Ovalada"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/cara_forma_corazon_radio_button"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:hint="Corazon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="16dp"
+                        android:text="Corazon"
+                        android:textSize="12sp"/>
+                </RadioGroup>
+            </RelativeLayout>
         </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@id/cara_forma_layout"
-            android:paddingBottom="16dp">
+    </ScrollView>
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_left_arrow"/>
+    <LinearLayout
+        android:id="@+id/button_layout_tenth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
 
-            <ImageView
-                android:id="@+id/tenth_forward_button"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_right_arrow"/>
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/tenth_backward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_left_arrow"/>
 
-    </RelativeLayout>
-
-</ScrollView>
+        <ImageView
+            android:id="@+id/tenth_forward_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_right_arrow"/>
+    </LinearLayout>
+</RelativeLayout>

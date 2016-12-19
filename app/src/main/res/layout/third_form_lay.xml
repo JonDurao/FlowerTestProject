@@ -2,90 +2,93 @@
      xmlns:android="http://schemas.android.com/apk/res/android"
      android:background="@color/colorAccent"
      android:layout_width="match_parent"
-     android:layout_height="fill_parent"
-     android:padding="8dp">
+     android:layout_height="fill_parent">
 
-        <TextView
-            android:id="@+id/piel_title"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="24dp"
-            android:text="Asi describo mi piel"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp"/>
+     <TextView
+         android:id="@+id/piel_title"
+         android:gravity="center"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:padding="24dp"
+         android:text="Asi describo mi piel"
+         android:textColor="@color/colorPrimaryDark"
+         android:textSize="24sp"/>
 
-        <LinearLayout
-            android:id="@+id/piel_radio_group_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/piel_title">
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/piel_title"
+         android:padding="8dp">
 
-            <RadioGroup
-                android:id="@+id/piel_radio_group"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+         <LinearLayout
+             android:id="@+id/piel_radio_group_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/piel_title">
 
-                <RadioButton
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="0"
-                    android:padding="16dp"
-                    android:text="Piel Seca"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp"/>
+             <RadioGroup
+                 android:id="@+id/piel_radio_group"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="1"
-                    android:padding="16dp"
-                    android:text="Piel Mixta"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp"/>
+                 <RadioButton
+                     android:buttonTint="@color/colorPrimaryDark"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="0"
+                     android:padding="16dp"
+                     android:text="Piel Seca"
+                     android:textColor="@color/colorPrimaryDark"
+                     android:textSize="15sp"/>
 
-                <RadioButton
-                    android:buttonTint="@color/colorPrimaryDark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="2"
-                    android:padding="16dp"
-                    android:text="Piel Grasa"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp"/>
+                 <RadioButton
+                     android:buttonTint="@color/colorPrimaryDark"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="1"
+                     android:padding="16dp"
+                     android:text="Piel Mixta"
+                     android:textColor="@color/colorPrimaryDark"
+                     android:textSize="15sp"/>
 
-            </RadioGroup>
+                 <RadioButton
+                     android:buttonTint="@color/colorPrimaryDark"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="2"
+                     android:padding="16dp"
+                     android:text="Piel Grasa"
+                     android:textColor="@color/colorPrimaryDark"
+                     android:textSize="15sp"/>
 
-        </LinearLayout>
+             </RadioGroup>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="16dp">
+         </LinearLayout>
+     </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/third_backward_button"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_left_arrow"/>
+     <LinearLayout
+         android:id="@+id/button_layout_third"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_alignParentBottom="true"
+         android:padding="16dp">
 
-            <ImageView
-                android:id="@+id/third_forward_button"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_right_arrow"/>
-        </LinearLayout>
+         <ImageView
+             android:id="@+id/third_backward_button"
+             android:layout_width="0dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             android:padding="4dp"
+             android:src="@drawable/ic_left_arrow"/>
+
+         <ImageView
+             android:id="@+id/third_forward_button"
+             android:layout_width="0dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             android:padding="4dp"
+             android:src="@drawable/ic_right_arrow"/>
+     </LinearLayout>
 
  </RelativeLayout>
